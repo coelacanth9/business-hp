@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #1a1a2e;
+  --color-text-secondary: #555;
+  --color-accent: #2c3e6b;
+  --color-accent-light: #3a5ba0;
+  --color-border: #e0e0e0;
+  --font-base: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Header ===== */
+.header {
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 64px 0 56px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.header-subtitle {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 64px 0;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+/* ===== About ===== */
+.about-info {
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+
+.about-info dt {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  float: left;
+  width: 100px;
+  clear: left;
+  padding: 4px 0;
+}
+
+.about-info dd {
+  margin-left: 100px;
+  padding: 4px 0;
+  color: var(--color-text-secondary);
+}
+
+.about p {
+  color: var(--color-text-secondary);
+  max-width: 640px;
+}
+
+/* ===== Works ===== */
+.works {
+  background-color: var(--color-surface);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+  padding: 28px 32px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background-color: #eef1f7;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.card-meta dt {
+  font-weight: 600;
+  color: var(--color-text);
+  display: inline;
+}
+
+.card-meta dt::after {
+  content: "：";
+}
+
+.card-meta dd {
+  display: inline;
+  color: var(--color-text-secondary);
+}
+
+.card-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ===== Contact ===== */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent-light);
+  text-decoration: none;
+  padding: 12px 32px;
+  border: 2px solid var(--color-accent-light);
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-email:hover {
+  background-color: var(--color-accent-light);
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .header {
+    padding: 48px 0 40px;
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .card-body {
+    padding: 20px 20px;
+  }
+}
